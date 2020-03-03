@@ -1,0 +1,9 @@
+{
+  "eslint.enable": true,
+  "eslint.packageManager": "yarn",
+  "eslint.validate": ["javascript", "javascriptreact"],
+  "eslint.workingDirectories": [
+    { "directory": "./src", "changeProcessCWD": true },
+    { "directory": "./build", "changeProcessCWD": true }
+  ]
+}
