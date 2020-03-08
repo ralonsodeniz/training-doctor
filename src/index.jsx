@@ -1,6 +1,18 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import axios from 'axios';
 
 import App from 'components/App';
+import AppHelmet from 'components/Helmet';
 
-ReactDom.render(<App />, document.getElementById('root'));
+if (process.env.NODE_ENV === 'development') {
+  axios.defaults.baseURL = process.env.APP_API_DEVELOPMENT;
+} else axios.defaults.baseURL = process.env.APP_API_PRODUCTION;
+
+ReactDom.render(
+  <>
+    <AppHelmet />
+    <App />
+  </>,
+  document.getElementById('root')
+);

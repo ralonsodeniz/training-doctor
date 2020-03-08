@@ -17,4 +17,5 @@ module.exports = {
   appHtml: resolveApp('public/index.html'),
   appIndexJs: resolveApp('src/index.jsx'), // Main entry point
   appSrc: resolveApp('src'), // App source
+  appFunctions: resolveApp('functions'),
 };

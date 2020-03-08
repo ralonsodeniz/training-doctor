@@ -2,7 +2,6 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-
 const paths = require('./paths');
 
 module.exports = {
@@ -54,11 +53,26 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: [
+      '*',
+      '.js',
+      '.jsx',
+      '.css',
+      '.scss',
+      '.svg',
+      '.jpeg',
+      '.png',
+    ],
     alias: {
       components: path.resolve(paths.appSrc, 'components'),
       pages: path.resolve(paths.appSrc, 'pages'),
-      utils: path.resolve(paths.appSrc, 'utils'),
+      redux: path.resolve(paths.appSrc, 'redux'),
+      reducers: path.resolve(paths.appSrc, 'redux/reducers'),
+      actions: path.resolve(paths.appSrc, 'redux/actions'),
+      types: path.resolve(paths.appSrc, 'redux/types'),
+      sagas: path.resolve(paths.appSrc, 'redux/sagas'),
+      selectors: path.resolve(paths.appSrc, 'redux/selectors'),
+      helpers: path.resolve(paths.appSrc, 'redux/helpers'),
       assets: path.resolve(paths.appAssets),
     },
   },
