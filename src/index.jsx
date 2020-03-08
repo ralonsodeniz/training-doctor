@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import axios from 'axios';
 
-import App from 'components/App';
+import App from 'components/Editor/Editor';
 import AppHelmet from 'components/Helmet';
 
 if (process.env.NODE_ENV === 'development') {

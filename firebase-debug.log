@@ -1,0 +1,1169 @@
+[debug] [2020-03-08T18:24:41.097Z] ----------------------------------------------------------------------
+[debug] [2020-03-08T18:24:41.100Z] Command:       /home/rad/.nvm/versions/node/v12.6.0/bin/node /home/rad/.nvm/versions/node/v12.6.0/bin/firebase serve
+[debug] [2020-03-08T18:24:41.100Z] CLI Version:   7.14.0
+[debug] [2020-03-08T18:24:41.100Z] Platform:      linux
+[debug] [2020-03-08T18:24:41.100Z] Node Version:  v12.6.0
+[debug] [2020-03-08T18:24:41.101Z] Time:          Sun Mar 08 2020 19:24:41 GMT+0100 (Central European Standard Time)
+[debug] [2020-03-08T18:24:41.101Z] ----------------------------------------------------------------------
+[debug] [2020-03-08T18:24:41.101Z] 
+[debug] [2020-03-08T18:24:41.108Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-08T18:24:41.109Z] > authorizing via signed-in user
+[debug] [2020-03-08T18:24:41.109Z] [iam] checking project training-doctor for permissions ["firebase.projects.get"]
+[debug] [2020-03-08T18:24:41.111Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/training-doctor:testIamPermissions  
+
+[debug] [2020-03-08T18:24:42.045Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-08T18:24:42.047Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/training-doctor  
+ 
+[debug] [2020-03-08T18:24:42.347Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/mnt/d/webProjects/trainingDoctor'...
+[info] 
+[debug] [2020-03-08T18:24:42.353Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/training-doctor/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: functions emulator started at http://localhost:5001
+[debug] [2020-03-08T18:24:46.652Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/mnt/d/webProjects/trainingDoctor/functions" for Cloud Functions...
+[debug] [2020-03-08T18:24:46.802Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-08T18:24:46.803Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-08T18:24:46.803Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-08T18:24:46.804Z] [worker-~diagnostic~-5eccbee1-0627-413f-96c3-9a6108220a1f]: Assigning socketPath: /tmp/fire_emu_11232.sock
+[debug] [2020-03-08T18:24:46.804Z] [worker-~diagnostic~-5eccbee1-0627-413f-96c3-9a6108220a1f]: BUSY
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-03-08T18:24:47.162Z] [runtime-status] [11232] Functions runtime initialized. {"cwd":"/mnt/d/webProjects/trainingDoctor/functions","node_version":"12.6.0"}
+[debug] [2020-03-08T18:24:47.164Z] [runtime-status] [11232] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T18:24:47.166Z] [runtime-status] [11232] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/mnt/d/webProjects/trainingDoctor/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T18:24:47.168Z] [runtime-status] [11232] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/mnt/d/webProjects/trainingDoctor/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T18:24:47.169Z] [runtime-status] [11232] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/mnt/d/webProjects/trainingDoctor/functions/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[api]: http function initialized (http://localhost:5001/training-doctor/europe-west1/api).
+[debug] [2020-03-08T18:24:48.179Z] [worker-~diagnostic~-5eccbee1-0627-413f-96c3-9a6108220a1f]: IDLE
+[debug] [2020-03-08T20:25:56.567Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:25:56.567Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:25:56.568Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:25:56.603Z] [worker-pool] addWorker(api)
+[debug] [2020-03-08T20:25:56.603Z] [worker-pool] Adding worker with key api, total=1
+[debug] [2020-03-08T20:25:56.604Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:25:56.604Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:25:56.604Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:25:57.012Z] [runtime-status] [11243] Functions runtime initialized. {"cwd":"/mnt/d/webProjects/trainingDoctor/functions","node_version":"12.6.0"}
+[debug] [2020-03-08T20:25:57.014Z] [runtime-status] [11243] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-08T20:25:57.017Z] [runtime-status] [11243] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/mnt/d/webProjects/trainingDoctor/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-08T20:25:57.018Z] [runtime-status] [11243] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/mnt/d/webProjects/trainingDoctor/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T20:25:57.019Z] [runtime-status] [11243] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/mnt/d/webProjects/trainingDoctor/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-08T20:26:01.242Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:26:01.244Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:26:01.244Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:26:01.247Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:26:01.253Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:26:01.263Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:26:01.269Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:26:01.921Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:26:01.921Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:27:59.467Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:27:59.468Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:27:59.468Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:27:59.472Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:27:59.473Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:27:59.473Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:27:59.474Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:27:59.475Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:27:59.475Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:27:59.476Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:27:59.477Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:27:59.479Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:27:59.479Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:27:59.590Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:27:59.590Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:28:11.130Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:28:11.130Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:28:11.130Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:28:11.130Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:28:11.131Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:28:11.131Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:28:11.131Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:28:11.133Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:28:11.133Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:28:11.133Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:28:11.134Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:28:11.135Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:28:11.136Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:28:11.227Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:28:11.228Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:28:20.117Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:28:20.117Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:28:20.118Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:28:20.118Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:28:20.119Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:28:20.119Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:28:20.121Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:28:20.133Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:28:20.137Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:28:20.138Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:28:20.139Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:28:20.155Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:28:20.155Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:28:20.288Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:28:20.288Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:30:00.447Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:30:00.447Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:30:00.447Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:30:00.447Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:30:00.447Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:30:00.447Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:30:00.448Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:30:00.449Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:30:00.449Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:30:00.449Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:30:00.450Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:30:00.451Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:30:00.452Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:30:00.553Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:30:00.553Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:30:05.852Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:30:05.852Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:30:05.852Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:30:05.852Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:30:05.853Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:30:05.853Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:30:05.853Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:30:05.859Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:30:05.860Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:30:05.860Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:30:05.862Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:30:05.883Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:30:05.884Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:30:05.985Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:30:05.985Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:31:24.197Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:31:24.197Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:31:24.197Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:31:24.198Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:31:24.198Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:31:24.198Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:31:24.198Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:31:24.200Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:31:24.200Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:31:24.200Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:31:24.201Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:31:24.203Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:31:24.205Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:31:24.305Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:31:24.305Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:31:58.703Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:31:58.703Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:31:58.703Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:31:58.704Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:31:58.704Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:31:58.704Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:31:58.704Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:31:58.706Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:31:58.706Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:31:58.706Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:31:58.707Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:31:58.709Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:31:58.712Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:31:58.840Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:31:58.842Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:32:06.621Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:32:06.622Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:32:06.622Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:32:06.622Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:32:06.622Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:32:06.622Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:32:06.630Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:32:06.632Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:32:06.632Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:32:06.633Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:32:06.634Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:32:06.637Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:32:06.637Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:32:06.741Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:32:06.741Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:32:25.106Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:32:25.106Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:32:25.106Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:32:25.106Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:32:25.106Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:32:25.106Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:32:25.108Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:32:25.110Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:32:25.110Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:32:25.110Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:32:25.111Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:32:25.113Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:32:25.113Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:32:25.237Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:32:25.238Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:32:32.702Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:32:32.702Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:32:32.702Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:32:32.702Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:32:32.704Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:32:32.704Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:32:32.714Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:32:32.715Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:32:32.716Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:32:32.716Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:32:32.717Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:32:32.720Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:32:32.725Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:32:32.886Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:32:32.886Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:33:27.176Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:33:27.176Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:33:27.176Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:33:27.177Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:33:27.177Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:33:27.177Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:33:27.178Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:33:27.180Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:33:27.180Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:33:27.180Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:33:27.181Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:33:27.184Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:33:27.185Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:33:27.278Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:33:27.278Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:34:18.554Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:34:18.555Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:34:18.555Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:34:18.555Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:34:18.556Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:34:18.557Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:34:18.558Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:34:18.559Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:34:18.559Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:34:18.560Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:34:18.561Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:34:18.562Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:34:18.563Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:34:18.663Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:34:18.663Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:37:02.634Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:37:02.634Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:37:02.634Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:37:02.634Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:37:02.634Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:37:02.634Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:37:02.635Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:37:02.636Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:37:02.637Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:37:02.637Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:37:02.638Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:37:02.639Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:37:02.639Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:37:02.750Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:37:02.751Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:37:16.716Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:37:16.716Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:37:16.716Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:37:16.716Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:37:16.716Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:37:16.716Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:37:16.717Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:37:16.719Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:37:16.719Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:37:16.719Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:37:16.720Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:37:16.721Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:37:16.721Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:37:16.836Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:37:16.836Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:38:26.326Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:38:26.326Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:38:26.326Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:38:26.326Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:38:26.326Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:38:26.326Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:38:26.327Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:38:26.328Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:38:26.328Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:38:26.329Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:38:26.329Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:38:26.330Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:38:26.331Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:38:26.443Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:38:26.444Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:39:12.408Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:39:12.408Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:39:12.408Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:39:12.408Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:39:12.408Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:39:12.408Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:39:12.409Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:39:12.410Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:39:12.410Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:39:12.412Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:39:12.413Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:39:12.415Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:39:12.415Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:39:12.519Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:39:12.519Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:40:10.513Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:40:10.513Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:40:10.513Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:40:10.513Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:40:10.513Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:40:10.513Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:40:10.514Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:40:10.515Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:40:10.516Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:40:10.516Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:40:10.517Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:40:10.520Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:40:10.522Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:40:10.635Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:40:10.635Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:41:45.315Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:41:45.315Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:41:45.315Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:41:45.316Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:41:45.316Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:41:45.316Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:41:45.316Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:41:45.318Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:41:45.318Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:41:45.318Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:41:45.319Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:41:45.320Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:41:45.321Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:41:45.419Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:41:45.419Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:44:43.020Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:44:43.020Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:44:43.020Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:44:43.020Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:44:43.021Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:44:43.021Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:44:43.021Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:44:43.023Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:44:43.023Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:44:43.023Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:44:43.024Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:44:43.026Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:44:43.026Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:44:43.140Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:44:43.141Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:44:47.933Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:44:47.934Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:44:47.934Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:44:47.934Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:44:47.934Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:44:47.934Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:44:47.935Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:44:47.937Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:44:47.937Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:44:47.938Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:44:47.939Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:44:47.948Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:44:47.948Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:44:48.070Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:44:48.070Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:45:51.931Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:45:51.931Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:45:51.931Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:45:51.931Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:45:51.932Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:45:51.932Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:45:51.932Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:45:51.933Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:45:51.933Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:45:51.934Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:45:51.935Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:45:51.938Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:45:51.938Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:45:52.041Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:45:52.041Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T20:58:35.562Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T20:58:35.562Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T20:58:35.562Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T20:58:35.562Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T20:58:35.562Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:58:35.562Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T20:58:35.563Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T20:58:35.565Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T20:58:35.565Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T20:58:35.565Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T20:58:35.566Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T20:58:35.569Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T20:58:35.570Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T20:58:35.844Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T20:58:35.844Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:00:04.454Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:00:04.455Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:00:04.455Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:00:04.455Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:00:04.455Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:00:04.455Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:00:04.456Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:00:04.457Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:00:04.457Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:00:04.457Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:00:04.458Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:00:04.459Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:00:04.459Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:00:04.562Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:00:04.562Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:00:19.321Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:00:19.321Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:00:19.321Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:00:19.322Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:00:19.322Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:00:19.322Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:00:19.322Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:00:19.324Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:00:19.326Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:00:19.326Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:00:19.327Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:00:19.328Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:00:19.329Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:00:19.436Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:00:19.436Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:00:56.883Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:00:56.884Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:00:56.884Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:00:56.884Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:00:56.884Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:00:56.885Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:00:56.885Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:00:56.886Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:00:56.886Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:00:56.886Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:00:56.887Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:00:56.889Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:00:56.890Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:00:56.982Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:00:56.983Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:01:16.245Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:01:16.245Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:01:16.245Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:01:16.245Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:01:16.245Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:01:16.245Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:01:16.246Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:01:16.247Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:01:16.247Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:01:16.248Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:01:16.249Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:01:16.251Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:01:16.251Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:01:16.357Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:01:16.357Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:01:28.976Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:01:28.976Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:01:28.976Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:01:28.977Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:01:28.977Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:01:28.977Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:01:28.977Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:01:28.979Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:01:28.979Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:01:28.979Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:01:28.980Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:01:28.981Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:01:28.982Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:01:29.079Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:01:29.079Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:02:10.654Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:02:10.654Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:02:10.654Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:02:10.654Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:02:10.655Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:02:10.655Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:02:10.655Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:02:10.657Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:02:10.657Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:02:10.657Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:02:10.658Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:02:10.661Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:02:10.662Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:02:10.772Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:02:10.772Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:02:42.095Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:02:42.095Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:02:42.095Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:02:42.095Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:02:42.095Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:02:42.095Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:02:42.096Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:02:42.097Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:02:42.097Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:02:42.097Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:02:42.099Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:02:42.100Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:02:42.101Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:02:42.202Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:02:42.202Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:03:12.943Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:03:12.943Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:03:12.943Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:03:12.943Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:03:12.943Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:03:12.943Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:03:12.945Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:03:12.946Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:03:12.946Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:03:12.947Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:03:12.947Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:03:12.949Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:03:12.949Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:03:13.055Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:03:13.055Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:17:13.283Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:17:13.283Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:17:13.283Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:17:13.283Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:17:13.284Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:17:13.284Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:17:13.284Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:17:13.286Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:17:13.286Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:17:13.286Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:17:13.287Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:17:13.289Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:17:13.289Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:17:13.670Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:17:13.671Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:18:41.564Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:18:41.565Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:18:41.565Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:18:41.565Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:18:41.565Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:18:41.565Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:18:41.566Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:18:41.567Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:18:41.567Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:18:41.568Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:18:41.570Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:18:41.572Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:18:41.574Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:18:41.678Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:18:41.678Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:19:30.142Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:19:30.142Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:19:30.142Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:19:30.142Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:19:30.143Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:19:30.143Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:19:30.143Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:19:30.144Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:19:30.144Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:19:30.145Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:19:30.145Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:19:30.147Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:19:30.147Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:19:30.372Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:19:30.372Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:20:55.589Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:20:55.589Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:20:55.590Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:20:55.590Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:20:55.590Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:20:55.590Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:20:55.591Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:20:55.592Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:20:55.592Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:20:55.592Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:20:55.594Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:20:55.595Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:20:55.595Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:20:55.700Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:20:55.701Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:21:24.174Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:21:24.174Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:21:24.174Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:21:24.174Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:21:24.174Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:21:24.174Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:21:24.175Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:21:24.176Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:21:24.176Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:21:24.177Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:21:24.178Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:21:24.179Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:21:24.180Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:21:24.422Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:21:24.422Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:25:12.220Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:25:12.220Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:25:12.220Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:25:12.220Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:25:12.220Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:25:12.220Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:25:12.221Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:25:12.222Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:25:12.222Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:25:12.224Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:25:12.226Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:25:12.228Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:25:12.229Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:25:12.332Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:25:12.332Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:26:24.076Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:26:24.077Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:26:24.077Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:26:24.077Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:26:24.078Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:26:24.078Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:26:24.089Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:26:24.096Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:26:24.097Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:26:24.097Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:26:24.098Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:26:24.100Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:26:24.101Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:26:24.201Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:26:24.204Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:26:43.539Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:26:43.539Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:26:43.539Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:26:43.539Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:26:43.539Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:26:43.539Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:26:43.540Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:26:43.542Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:26:43.542Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:26:43.542Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:26:43.545Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:26:43.546Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:26:43.547Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:26:43.675Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:26:43.675Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:27:48.167Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:27:48.168Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:27:48.168Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:27:48.168Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:27:48.168Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:27:48.168Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:27:48.168Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:27:48.170Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:27:48.170Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:27:48.170Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:27:48.172Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:27:48.174Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:27:48.175Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:27:48.288Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:27:48.288Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:29:29.554Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:29:29.554Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:29:29.554Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:29:29.554Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:29:29.554Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:29:29.554Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:29:29.555Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:29:29.556Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:29:29.556Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:29:29.556Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:29:29.557Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:29:29.558Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:29:29.558Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:29:29.676Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:29:29.676Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:30:01.915Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:30:01.916Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:30:01.916Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:30:01.916Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:30:01.916Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:30:01.916Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:30:01.917Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:30:01.918Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:30:01.918Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:30:01.918Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:30:01.920Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:30:01.921Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:30:01.922Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:30:02.023Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:30:02.024Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:30:22.067Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:30:22.067Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:30:22.067Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:30:22.067Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:30:22.067Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:30:22.067Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:30:22.068Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:30:22.074Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:30:22.074Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:30:22.075Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:30:22.077Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:30:22.078Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:30:22.079Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:30:22.204Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:30:22.204Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:30:34.487Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:30:34.487Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:30:34.487Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:30:34.487Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:30:34.488Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:30:34.488Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:30:34.488Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:30:34.490Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:30:34.490Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:30:34.490Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:30:34.492Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:30:34.494Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:30:34.494Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:30:34.604Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:30:34.604Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:30:40.890Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:30:40.891Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:30:40.891Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:30:40.892Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:30:40.892Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:30:40.892Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:30:40.900Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:30:40.905Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:30:40.905Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:30:40.906Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:30:40.907Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:30:40.914Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:30:40.915Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:30:41.014Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:30:41.015Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:34:20.360Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:34:20.361Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:34:20.361Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:34:20.361Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:34:20.361Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:34:20.361Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:34:20.362Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:34:20.363Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:34:20.363Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:34:20.365Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:34:20.370Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:34:20.372Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:34:20.372Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:34:20.463Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:34:20.463Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:35:05.082Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:35:05.082Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:35:05.082Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:35:05.082Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:35:05.082Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:35:05.082Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:35:05.083Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:35:05.128Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:35:05.128Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:35:05.128Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:35:05.130Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:35:05.132Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:35:05.133Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:35:05.227Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:35:05.227Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:35:24.933Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:35:24.934Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:35:24.934Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:35:24.934Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:35:24.935Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:35:24.935Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:35:24.935Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:35:24.936Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:35:24.937Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:35:24.937Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:35:24.938Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:35:24.939Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:35:24.939Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:35:25.053Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:35:25.054Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:36:06.980Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:36:06.980Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:36:06.980Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:36:06.981Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:36:06.981Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:36:06.981Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:36:06.981Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:36:06.982Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:36:06.983Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:36:06.983Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:36:06.984Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:36:06.985Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:36:06.986Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:36:07.083Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:36:07.083Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:36:34.306Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:36:34.306Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:36:34.306Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:36:34.306Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:36:34.307Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:36:34.307Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:36:34.307Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:36:34.309Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:36:34.309Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:36:34.309Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:36:34.310Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:36:34.316Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:36:34.317Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:36:34.423Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:36:34.424Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:37:03.232Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:37:03.233Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:37:03.233Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:37:03.233Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:37:03.233Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:37:03.233Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:37:03.233Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:37:03.234Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:37:03.234Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:37:03.235Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:37:03.236Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:37:03.237Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:37:03.237Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:37:03.339Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:37:03.340Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:37:17.524Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:37:17.524Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:37:17.525Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:37:17.525Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:37:17.525Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:37:17.525Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:37:17.525Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:37:17.526Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:37:17.527Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:37:17.527Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:37:17.528Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:37:17.531Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:37:17.532Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:37:17.761Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:37:17.761Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:37:49.722Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:37:49.722Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:37:49.722Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:37:49.723Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:37:49.723Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:37:49.723Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:37:49.723Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:37:49.724Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:37:49.725Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:37:49.727Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:37:49.729Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:37:49.730Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:37:49.731Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:37:49.850Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:37:49.850Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:38:38.840Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:38:38.840Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:38:38.841Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:38:38.841Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:38:38.841Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:38:38.841Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:38:38.842Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:38:38.843Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:38:38.843Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:38:38.843Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:38:38.846Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:38:38.848Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:38:38.849Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:38:38.946Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:38:38.946Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:49:25.974Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:49:25.974Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:49:25.974Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:49:25.974Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:49:25.975Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:49:25.975Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:49:25.976Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:49:25.977Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:49:25.977Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:49:25.977Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:49:25.978Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:49:25.980Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:49:25.980Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:49:26.320Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:49:26.320Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:49:59.851Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:49:59.852Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:49:59.852Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:49:59.852Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:49:59.852Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:49:59.852Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:49:59.852Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:49:59.853Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:49:59.854Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:49:59.854Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:49:59.857Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:49:59.859Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:49:59.859Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:49:59.955Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:49:59.955Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:50:11.838Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:50:11.838Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:50:11.838Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:50:11.839Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:50:11.839Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:50:11.839Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:50:11.839Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:50:11.841Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:50:11.841Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:50:11.841Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:50:11.845Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:50:11.847Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:50:11.848Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:50:11.945Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:50:11.945Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:50:36.996Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:50:36.996Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:50:36.996Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:50:36.996Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:50:36.996Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:50:36.996Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:50:36.997Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:50:37.000Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:50:37.000Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:50:37.000Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:50:37.001Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:50:37.002Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:50:37.003Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:50:37.103Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:50:37.104Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:50:40.755Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:50:40.755Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:50:40.755Z] Accepted request OPTIONS /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:50:40.755Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:50:40.755Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:50:40.755Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:50:40.756Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:50:40.757Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:50:40.758Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:50:40.758Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:50:40.759Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:50:40.761Z] [runtime-status] [11243] Ephemeral server handling OPTIONS request
+[debug] [2020-03-08T21:50:40.764Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:50:40.766Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:50:40.766Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:50:40.769Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:50:40.770Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:50:40.770Z] Accepted request POST /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:50:40.770Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:50:40.770Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:50:40.770Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:50:40.775Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:50:40.776Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:50:40.777Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:50:40.777Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:50:40.779Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:50:40.819Z] [runtime-status] [11243] Ephemeral server handling POST request
+[debug] [2020-03-08T21:50:40.824Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:50:40.943Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:50:40.943Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:51:02.437Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:51:02.437Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:51:02.437Z] Accepted request OPTIONS /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:51:02.437Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:51:02.437Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:51:02.437Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:51:02.438Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:51:02.439Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:51:02.439Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:51:02.439Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:51:02.440Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:51:02.441Z] [runtime-status] [11243] Ephemeral server handling OPTIONS request
+[debug] [2020-03-08T21:51:02.443Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:51:02.443Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:51:02.444Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:51:02.447Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:51:02.447Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:51:02.448Z] Accepted request POST /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:51:02.448Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:51:02.448Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:51:02.448Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:51:02.454Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:51:02.456Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:51:02.456Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:51:02.456Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:51:02.457Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:51:02.458Z] [runtime-status] [11243] Ephemeral server handling POST request
+[debug] [2020-03-08T21:51:02.459Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:51:02.594Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:51:02.594Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:51:40.841Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:51:40.842Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:51:40.842Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:51:40.842Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:51:40.842Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:51:40.842Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:51:40.843Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:51:40.844Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:51:40.844Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:51:40.845Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:51:40.845Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:51:40.847Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:51:40.847Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:51:40.945Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:51:40.945Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:54:02.008Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:54:02.008Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:54:02.008Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:54:02.008Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:54:02.009Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:54:02.009Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:54:02.010Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:54:02.011Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:54:02.011Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:54:02.011Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:54:02.012Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:54:02.013Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:54:02.013Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:54:02.110Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:54:02.111Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:56:46.035Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:56:46.036Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:56:46.036Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:56:46.036Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:56:46.036Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:56:46.036Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:56:46.036Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:56:46.037Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:56:46.038Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:56:46.038Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:56:46.039Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:56:46.040Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:56:46.040Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:56:46.141Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:56:46.141Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-08T21:57:16.835Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-08T21:57:16.835Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-08T21:57:16.836Z] Accepted request GET /training-doctor/europe-west1/api/categories/cardiology/zAMkcZdM9xrSCeoIpTpU --> api
+[debug] [2020-03-08T21:57:16.836Z] [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-08T21:57:16.836Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: Assigning socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:57:16.836Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: BUSY
+[debug] [2020-03-08T21:57:16.836Z] [runtime-status] [11243] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-03-08T21:57:16.837Z] [runtime-status] [11243] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-08T21:57:16.838Z] [runtime-status] [11243] Running api in mode HTTPS
+[debug] [2020-03-08T21:57:16.838Z] [runtime-status] [11243] Attempting to listen to socketPath: /tmp/fire_emu_11243.sock
+[debug] [2020-03-08T21:57:16.840Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-08T21:57:16.843Z] [runtime-status] [11243] Ephemeral server handling GET request
+[debug] [2020-03-08T21:57:16.844Z] [runtime-status] [11243] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-03-08T21:57:16.933Z] [worker-api-df37d1fb-a084-468b-9452-594a55f40aa9]: IDLE
+[debug] [2020-03-08T21:57:16.933Z] [work-queue] {"queueLength":0,"workRunningCount":0}
