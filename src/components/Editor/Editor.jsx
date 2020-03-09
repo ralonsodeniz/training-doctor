@@ -74,9 +74,7 @@ const App = () => {
 
   const handleSubmitText = useCallback(
     async (section, data) => {
-      await axios.post(`/categories/${category}/${pathology}/${section}`, {
-        data,
-      });
+      await axios.post(`/categories/${category}/${pathology}/${section}`, { data });
     },
     [category, pathology]
   );

@@ -73,8 +73,7 @@ export const EditorContainer = styled(Container)({
     margin: 0,
     wordWrap: 'break-word',
     padding: '0.2em 0.4em',
-    fontFamily:
-      'SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace,',
+    fontFamily: 'SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace,',
   },
 
   '& pre > code': {
