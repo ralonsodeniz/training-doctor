@@ -69,10 +69,7 @@ const App = () => {
     let { value } = event.target;
     const { name } = event.target;
     if (name === 'category' || name === 'pathology') value = value.toLowerCase();
-    setState(prevState => ({
-      ...prevState,
-      [name]: value,
-    }));
+    setState(prevState => ({ ...prevState, [name]: value }));
   };
 
   const handleSubmitText = useCallback(
