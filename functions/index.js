@@ -14,7 +14,8 @@ const {
   getAllCategories,
   getCategory,
   getPathology,
-  postTest,
+  // postTest,
+  postPathology,
 } = require('./handlers/dataHandlers');
 
 app.use(cors());
@@ -28,6 +29,6 @@ app.post('/googlelogin', googleLogin);
 app.get('/categories/:category', getCategory);
 app.get('/categories', getAllCategories);
 app.get('/categories/:category/:pathology', getPathology);
-app.post('/categories/cardiology/zAMkcZdM9xrSCeoIpTpU', postTest);
+app.post('/categories/:category/:pathology/:section', postPathology);
 
 exports.api = functions.region('europe-west1').https.onRequest(app);

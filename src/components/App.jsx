@@ -15,12 +15,9 @@ const App = () => {
     const fetchMdFile = async () => {
       try {
         // we do not need to put the entire rest api url, just the endpoint, because in te pacakge.json we have added the proxy key with the url to the rest api
-        const res = await axios.get(
-          '/categories/cardiology/zAMkcZdM9xrSCeoIpTpU',
-          {
-            cancelToken: source.token,
-          }
-        );
+        const res = await axios.get('/categories/cardiology/zAMkcZdM9xrSCeoIpTpU', {
+          cancelToken: source.token,
+        });
 
         setMdFile(res.data);
         setText(res.data.pathology.test);

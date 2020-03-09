@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import ReactMarkdown from 'react-markdown';
 import axios from 'axios';
 
@@ -9,70 +9,141 @@ import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import Button from '@material-ui/core/Button';
 
 import SaveIcon from '@material-ui/icons/Save';
+import DownloadIcon from '@material-ui/icons/CloudDownload';
 
 import { EditorContainer } from './Editor.styles';
 
 const App = () => {
   const [mdFile, setMdFile] = useState(null);
-  const [text, setText] = useState('');
+  const [state, setState] = useState({
+    category: '',
+    pathology: '',
+    definition: '',
+    epidemiology: '',
+    pathophysiology: '',
+    aetiology: '',
+    diagnosis: '',
+    treatment: '',
+  });
 
-  useEffect(() => {
-    // we create an abort controller to cleanup the fetch in the case the component is unmounted and the fetch has not finished
-    const source = axios.CancelToken.source();
+  const {
+    category,
+    pathology,
+    definition,
+    epidemiology,
+    pathophysiology,
+    aetiology,
+    diagnosis,
+    treatment,
+  } = state;
 
-    const fetchMdFile = async () => {
-      try {
-        // we do not need to put the entire rest api url, just the endpoint, because in te pacakge.json we have added the proxy key with the url to the rest api
-        const res = await axios.get(
-          '/categories/cardiology/zAMkcZdM9xrSCeoIpTpU',
-          {
-            cancelToken: source.token,
-          }
-        );
+  //   useEffect(() => {
+  //     // we create an abort controller to cleanup the fetch in the case the component is unmounted and the fetch has not finished
+  //     const source = axios.CancelToken.source();
 
-        setMdFile(res.data);
-      } catch (error) {
-        if (axios.isCancel(error)) {
-          console.log('Api cancelled');
-        } else {
-          console.log(error.message);
-        }
-      }
-    };
+  //     const fetchMdFile = async () => {
+  //       try {
+  //         // we do not need to put the entire rest api url, just the endpoint, because in te pacakge.json we have added the proxy key with the url to the rest api
+  //         const res = await axios.get('/categories/cardiology/aneurysm', {
+  //           cancelToken: source.token,
+  //         });
 
-    fetchMdFile();
-    // cleanup function to cancel the api request
-    return () => {
-      source.cancel();
-    };
-  }, []);
+  //         setMdFile(res.data.pathologyData);
+  //       } catch (error) {
+  //         if (axios.isCancel(error)) {
+  //           console.log('Api cancelled');
+  //         } else {
+  //           console.log(error.message);
+  //         }
+  //       }
+  //     };
+
+  //     fetchMdFile();
+  //     // cleanup function to cancel the api request
+  //     return () => {
+  //       source.cancel();
+  //     };
+  //   }, []);
 
   const onChange = event => {
-    setText(event.target.value);
+    let { value } = event.target;
+    const { name } = event.target;
+    if (name === 'category' || name === 'pathology') value = value.toLowerCase();
+    setState(prevState => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
-  const handleSubmitText = async () => {
-    await axios.post('/categories/cardiology/zAMkcZdM9xrSCeoIpTpU', {
-      text,
-    });
-  };
+  const handleSubmitText = useCallback(
+    async (section, data) => {
+      await axios.post(`/categories/${category}/${pathology}/${section}`, {
+        data,
+      });
+    },
+    [category, pathology]
+  );
+
+  const handleDownloadPathology = useCallback(async () => {
+    const res =
+      !!category && !!pathology && (await axios.get(`/categories/${category}/${pathology}`));
+    if (res) {
+      const { pathologyData } = res.data;
+      setMdFile(pathologyData);
+      setState(prevState => ({
+        ...prevState,
+        definition: pathologyData.definition ? pathologyData.definition : '',
+        epidemiology: pathologyData.epidemiology ? pathologyData.epidemiology : '',
+        pathophysiology: pathologyData.pathophysiology ? pathologyData.pathophysiology : '',
+        aetiology: pathologyData.aetiology ? pathologyData.aetiology : '',
+        diagnosis: pathologyData.diagnosis ? pathologyData.diagnosis : '',
+        treatment: pathologyData.treatment ? pathologyData.treatment : '',
+      }));
+    }
+  }, [category, pathology]);
 
   return (
     <EditorContainer>
       <Grid container className="content">
         <Grid item xs={12} sm={6}>
-          <TextField required label="Category" variant="outlined" />
+          <TextField
+            required
+            label="Category"
+            variant="outlined"
+            name="category"
+            value={category}
+            onChange={onChange}
+          />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <TextField required label="Pathology" variant="outlined" />
+          <TextField
+            required
+            label="Pathology"
+            variant="outlined"
+            name="pathology"
+            value={pathology}
+            onChange={onChange}
+          />
         </Grid>
+        <Button
+          variant="outlined"
+          color="primary"
+          size="small"
+          startIcon={<DownloadIcon />}
+          onClick={handleDownloadPathology}
+          style={{ marginTop: 20 }}
+        >
+          Download pathology
+        </Button>
+
         <Grid item xs={12}>
           <h2>Definition</h2>
           <TextareaAutosize
             aria-label="minimum height"
             rowsMin={20}
             style={{ minWidth: '100%', maxWidth: '100%' }}
-            value={text}
+            value={definition}
+            name="definition"
             onChange={onChange}
           />
           <Button
@@ -80,16 +151,12 @@ const App = () => {
             color="primary"
             size="small"
             startIcon={<SaveIcon />}
-            onClick={handleSubmitText}
+            onClick={() => handleSubmitText('definition', definition)}
             style={{ marginBottom: 10 }}
           >
             Save
           </Button>
-          <ReactMarkdown
-            source={text}
-            escapeHtml={false}
-            className="content"
-          />
+          <ReactMarkdown source={definition} escapeHtml={false} className="content" />
         </Grid>
         <Grid item xs={12}>
           <h2>Epidemiology</h2>
@@ -97,7 +164,8 @@ const App = () => {
             aria-label="minimum height"
             rowsMin={20}
             style={{ minWidth: '100%', maxWidth: '100%' }}
-            value={text}
+            value={epidemiology}
+            name="epidemiology"
             onChange={onChange}
           />
           <Button
@@ -105,16 +173,12 @@ const App = () => {
             color="primary"
             size="small"
             startIcon={<SaveIcon />}
-            onClick={handleSubmitText}
+            onClick={() => handleSubmitText('epidemiology', epidemiology)}
             style={{ marginBottom: 10 }}
           >
             Save
           </Button>
-          <ReactMarkdown
-            source={text}
-            escapeHtml={false}
-            className="content"
-          />
+          <ReactMarkdown source={epidemiology} escapeHtml={false} className="content" />
         </Grid>
         <Grid item xs={12}>
           <h2>Pathophysiology</h2>
@@ -122,7 +186,8 @@ const App = () => {
             aria-label="minimum height"
             rowsMin={20}
             style={{ minWidth: '100%', maxWidth: '100%' }}
-            value={text}
+            value={pathophysiology}
+            name="pathophysiology"
             onChange={onChange}
           />
           <Button
@@ -130,16 +195,12 @@ const App = () => {
             color="primary"
             size="small"
             startIcon={<SaveIcon />}
-            onClick={handleSubmitText}
+            onClick={() => handleSubmitText('pathophysiology', pathophysiology)}
             style={{ marginBottom: 10 }}
           >
             Save
           </Button>
-          <ReactMarkdown
-            source={text}
-            escapeHtml={false}
-            className="content"
-          />
+          <ReactMarkdown source={pathophysiology} escapeHtml={false} className="content" />
         </Grid>
         <Grid item xs={12}>
           <h2>Aetiology</h2>
@@ -147,7 +208,8 @@ const App = () => {
             aria-label="minimum height"
             rowsMin={20}
             style={{ minWidth: '100%', maxWidth: '100%' }}
-            value={text}
+            value={aetiology}
+            name="aetiology"
             onChange={onChange}
           />
           <Button
@@ -155,16 +217,12 @@ const App = () => {
             color="primary"
             size="small"
             startIcon={<SaveIcon />}
-            onClick={handleSubmitText}
+            onClick={() => handleSubmitText('aetiology', aetiology)}
             style={{ marginBottom: 10 }}
           >
             Save
           </Button>
-          <ReactMarkdown
-            source={text}
-            escapeHtml={false}
-            className="content"
-          />
+          <ReactMarkdown source={aetiology} escapeHtml={false} className="content" />
         </Grid>
         <Grid item xs={12}>
           <h2>Diagnosis</h2>
@@ -172,7 +230,8 @@ const App = () => {
             aria-label="minimum height"
             rowsMin={20}
             style={{ minWidth: '100%', maxWidth: '100%' }}
-            value={text}
+            value={diagnosis}
+            name="diagnosis"
             onChange={onChange}
           />
           <Button
@@ -180,16 +239,12 @@ const App = () => {
             color="primary"
             size="small"
             startIcon={<SaveIcon />}
-            onClick={handleSubmitText}
+            onClick={() => handleSubmitText('diagnosis', diagnosis)}
             style={{ marginBottom: 10 }}
           >
             Save
           </Button>
-          <ReactMarkdown
-            source={text}
-            escapeHtml={false}
-            className="content"
-          />
+          <ReactMarkdown source={diagnosis} escapeHtml={false} className="content" />
         </Grid>
         <Grid item xs={12}>
           <h2>Treatment</h2>
@@ -197,7 +252,8 @@ const App = () => {
             aria-label="minimum height"
             rowsMin={20}
             style={{ minWidth: '100%', maxWidth: '100%' }}
-            value={text}
+            value={treatment}
+            name="treatment"
             onChange={onChange}
           />
           <Button
@@ -205,52 +261,29 @@ const App = () => {
             color="primary"
             size="small"
             startIcon={<SaveIcon />}
-            onClick={handleSubmitText}
+            onClick={() => handleSubmitText('treatment', treatment)}
             style={{ marginBottom: 10 }}
           >
             Save
           </Button>
-          <ReactMarkdown
-            source={text}
-            escapeHtml={false}
-            className="content"
-          />
+          <ReactMarkdown source={treatment} escapeHtml={false} className="content" />
         </Grid>
       </Grid>
-
-      {mdFile !== null && (
+      {mdFile && (
         <Container className="content">
-          <h1>{mdFile.pathology.pathology}</h1>
+          <h1>{mdFile.pathology}</h1>
           <h2>Definition</h2>
-          <ReactMarkdown
-            source={mdFile.pathology.definition}
-            escapeHtml={false}
-          />
+          <ReactMarkdown source={mdFile.definition} escapeHtml={false} />
           <h2>Epidemiology</h2>
-          <ReactMarkdown
-            source={mdFile.pathology.epidemiology}
-            escapeHtml={false}
-          />
+          <ReactMarkdown source={mdFile.epidemiology} escapeHtml={false} />
           <h2>Pathophysiology</h2>
-          <ReactMarkdown
-            source={mdFile.pathology.pathophysiology}
-            escapeHtml={false}
-          />
+          <ReactMarkdown source={mdFile.pathophysiology} escapeHtml={false} />
           <h2>Aetiology</h2>
-          <ReactMarkdown
-            source={mdFile.pathology.aetiology}
-            escapeHtml={false}
-          />
+          <ReactMarkdown source={mdFile.aetiology} escapeHtml={false} />
           <h2>Diagnosis</h2>
-          <ReactMarkdown
-            source={mdFile.pathology.diagnosis}
-            escapeHtml={false}
-          />
+          <ReactMarkdown source={mdFile.diagnosis} escapeHtml={false} />
           <h2>Treatment</h2>
-          <ReactMarkdown
-            source={mdFile.pathology.treatment}
-            escapeHtml={false}
-          />
+          <ReactMarkdown source={mdFile.treatment} escapeHtml={false} />
         </Container>
       )}
     </EditorContainer>

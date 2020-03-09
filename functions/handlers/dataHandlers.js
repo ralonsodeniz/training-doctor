@@ -1,20 +1,17 @@
 const { db } = require('../helpers/admin');
 
 exports.getCategory = async (req, res) => {
+  const { category } = req.params;
   try {
-    const collectionRef = db
-      .collection(`${req.params.category}`)
-      .orderBy('pathology', 'asc');
+    const collectionRef = db.collection(`${category}`).orderBy('pathology', 'asc');
     const collectionSnapshot = await collectionRef.get();
-    const category = collectionSnapshot.docs.map(doc => ({
+    const categoryArray = collectionSnapshot.docs.map(doc => ({
       pathology: doc.data().pathology,
       id: doc.data().id,
     }));
-    return res.json({ category });
+    return res.json({ categoryArray });
   } catch (error) {
-    return res
-      .status(500)
-      .json({ general: 'something went wrong, please try again' });
+    return res.status(500).json({ general: 'something went wrong, please try again' });
   }
 };
 
@@ -36,29 +33,44 @@ exports.getAllCategories = async (req, res) => {
         return categoryObj;
       })
     );
-    const categories = collectionsArray.filter(
-      categoryObj => categoryObj.category !== 'users'
-    );
+    const categories = collectionsArray.filter(categoryObj => categoryObj.category !== 'users');
     return res.json({ categories });
   } catch (error) {
-    return res
-      .status(500)
-      .json({ general: 'something went wrong, please try again' });
+    return res.status(500).json({ general: 'something went wrong, please try again' });
   }
 };
 
 exports.getPathology = async (req, res) => {
+  const { category, pathology } = req.params;
   try {
-    const pathologyRef = db.doc(
-      `/${req.params.category}/${req.params.pathology}`
-    );
+    const pathologyRef = db.doc(`/${category}/${pathology}`);
     const pathologySnapshot = await pathologyRef.get();
-    const pathology = pathologySnapshot.data();
-    return res.json({ pathology });
+    const pathologyData = pathologySnapshot.data();
+    return res.json({ pathologyData });
   } catch (error) {
-    return res
-      .status(500)
-      .json({ general: 'something went wrong, please try again' });
+    return res.status(500).json({ general: 'something went wrong, please try again' });
+  }
+};
+
+exports.postPathology = async (req, res) => {
+  const { data } = req.body;
+  const { category, pathology, section } = req.params;
+  try {
+    const pathologyRef = db.doc(`${category}/${pathology}`);
+    await pathologyRef.set(
+      {
+        pathology: pathology
+          .charAt(0)
+          .toUpperCase()
+          .concat(pathology.slice(1)),
+        [section]: data,
+      },
+      { merge: true }
+    );
+    const pathologyData = (await pathologyRef.get()).data();
+    return res.json({ pathologyData });
+  } catch (error) {
+    return res.status(500).json({ general: 'something went wrong, please try again' });
   }
 };
 
@@ -71,8 +83,6 @@ exports.postTest = async (req, res) => {
     await docRef.update({ test: req.body.text });
     return res.json({ message: 'updated' });
   } catch (error) {
-    return res
-      .status(500)
-      .json({ general: 'something went wrong, please try again' });
+    return res.status(500).json({ general: 'something went wrong, please try again' });
   }
 };
