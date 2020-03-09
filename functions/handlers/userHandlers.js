@@ -1,15 +1,11 @@
 const firebase = require('firebase');
-const BusBoy = require('busboy');
-const path = require('path');
-const os = require('os');
-const fs = require('fs');
+// const BusBoy = require('busboy');
+// const path = require('path');
+// const os = require('os');
+// const fs = require('fs');
 
-const { db, storage } = require('../helpers/admin');
-const {
-  validateSignupData,
-  validateLoginData,
-  reduceUserDetails,
-} = require('../helpers/helpers');
+const { db } = require('../helpers/admin');
+const { validateSignupData, validateLoginData } = require('../helpers/helpers');
 const { firebaseConfig } = require('../config/config');
 
 firebase.initializeApp(firebaseConfig);
@@ -36,9 +32,7 @@ exports.signUp = async (req, res) => {
       .get();
 
     if (userQuerySnaphot.docs.length > 0)
-      return res
-        .status(400)
-        .json({ handle: 'this user name is already taken' });
+      return res.status(400).json({ handle: 'this user name is already taken' });
 
     const { user } = await auth.createUserWithEmailAndPassword(
       signUpData.email,
@@ -64,9 +58,7 @@ exports.signUp = async (req, res) => {
   } catch (error) {
     if (error.code === 'auth/email-already-in-use')
       return res.status(400).json({ email: 'email is alredyin use' });
-    return res
-      .status(500)
-      .json({ general: 'something went wrong, pelease try again' });
+    return res.status(500).json({ general: 'something went wrong, pelease try again' });
   }
 };
 
@@ -80,29 +72,20 @@ exports.login = async (req, res) => {
   if (!valid) return res.status(400).json(errors);
 
   try {
-    const { user } = await auth.signInWithEmailAndPassword(
-      loginData.email,
-      loginData.password
-    );
+    const { user } = await auth.signInWithEmailAndPassword(loginData.email, loginData.password);
     const userIdToken = await user.getIdToken();
     return res.json({ token: userIdToken });
   } catch (error) {
-    return res
-      .status(403)
-      .json({ general: 'wrong credentials, please try again' });
+    return res.status(403).json({ general: 'wrong credentials, please try again' });
   }
 };
 
 exports.googleLogin = async (req, res) => {
   const { idToken } = req.body;
   try {
-    const googleCredential = firebase.auth.GoogleAuthProvider.credential(
-      idToken
-    );
+    const googleCredential = firebase.auth.GoogleAuthProvider.credential(idToken);
 
-    const { user } = await auth.signInWithCredential(
-      googleCredential
-    );
+    const { user } = await auth.signInWithCredential(googleCredential);
 
     const userQuerySnapshot = await db
       .collection('users')
@@ -129,8 +112,6 @@ exports.googleLogin = async (req, res) => {
     const userIdToken = await user.getIdToken();
     return res.status(201).json({ token: userIdToken });
   } catch (error) {
-    return res
-      .status(500)
-      .json({ general: 'something went wrong, pelease try again' });
+    return res.status(500).json({ general: 'something went wrong, pelease try again' });
   }
 };
