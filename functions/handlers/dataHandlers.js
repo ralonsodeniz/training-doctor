@@ -43,9 +43,12 @@ exports.getAllCategories = async (req, res) => {
 exports.getPathology = async (req, res) => {
   const { category, pathology } = req.params;
   try {
-    const pathologyRef = db.doc(`/${category}/${pathology}`);
-    const pathologySnapshot = await pathologyRef.get();
-    const pathologyData = pathologySnapshot.data();
+    const pathologyQueryObj = await db
+      .collection(`${category}`)
+      .where('pathology', '==', pathology)
+      .limit(1)
+      .get();
+    const pathologyData = pathologyQueryObj.docs[0].data();
     return res.json({ pathologyData });
   } catch (error) {
     return res.status(500).json({ general: 'something went wrong, please try again' });
@@ -56,29 +59,28 @@ exports.postPathology = async (req, res) => {
   const { data } = req.body;
   const { category, pathology, section } = req.params;
   try {
-    const pathologyRef = db.doc(`${category.toLowerCase()}/${pathology.toLowerCase()}`);
+    const pathologyQueryObj = await db
+      .collection(`${category}`)
+      .where('pathology', '==', pathology)
+      .limit(1)
+      .get();
+
+    let pathologyRef = null;
+
+    if (!pathologyQueryObj.empty) {
+      pathologyRef = db.doc(`${category.toLowerCase()}/${pathologyQueryObj.docs[0].id}`);
+    } else pathologyRef = db.collection(`${category}`).doc();
+
     await pathologyRef.set(
       {
         pathology,
+        category,
         [section]: data,
       },
       { merge: true }
     );
     const pathologyData = (await pathologyRef.get()).data();
     return res.json({ pathologyData });
-  } catch (error) {
-    return res.status(500).json({ general: 'something went wrong, please try again' });
-  }
-};
-
-exports.postTest = async (req, res) => {
-  if (req.body.text.trim() === '') {
-    return res.status(400).json({ body: ' must not be empty' });
-  }
-  try {
-    const docRef = db.doc('cardiology/zAMkcZdM9xrSCeoIpTpU');
-    await docRef.update({ test: req.body.text });
-    return res.json({ message: 'updated' });
   } catch (error) {
     return res.status(500).json({ general: 'something went wrong, please try again' });
   }
