@@ -9,7 +9,8 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --config build-utils/webpack.config.js --env.env=dev",
-    "build": "webpack --config build-utils/webpack.config.js --env.env=prod"
+    "build": "webpack --config build-utils/webpack.config.js --env.env=prod",
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -33,6 +34,8 @@
     "favicons-webpack-plugin": "^3.0.1",
     "file-loader": "^5.1.0",
     "html-webpack-plugin": "^4.0.0-beta.11",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.1.0",
     "prettier": "^1.19.1",
     "react-hot-loader": "^4.12.19",
     "react-svg-loader": "^3.0.3",

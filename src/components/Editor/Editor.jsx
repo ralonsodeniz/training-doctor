@@ -66,9 +66,9 @@ const App = () => {
   //   }, []);
 
   const onChange = event => {
-    let { value } = event.target;
+    const { value } = event.target;
     const { name } = event.target;
-    if (name === 'category' || name === 'pathology') value = value.toLowerCase();
+    // if (name === 'category' || name === 'pathology') value = value.toLowerCase();
     setState(prevState => ({ ...prevState, [name]: value }));
   };
 

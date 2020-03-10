@@ -53,16 +53,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [
-      '*',
-      '.js',
-      '.jsx',
-      '.css',
-      '.scss',
-      '.svg',
-      '.jpeg',
-      '.png',
-    ],
+    extensions: ['*', '.js', '.jsx', '.css', '.scss', '.svg', '.jpeg', '.png'],
     alias: {
       components: path.resolve(paths.appSrc, 'components'),
       pages: path.resolve(paths.appSrc, 'pages'),

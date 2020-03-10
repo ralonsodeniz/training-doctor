@@ -56,13 +56,10 @@ exports.postPathology = async (req, res) => {
   const { data } = req.body;
   const { category, pathology, section } = req.params;
   try {
-    const pathologyRef = db.doc(`${category}/${pathology}`);
+    const pathologyRef = db.doc(`${category.toLowerCase()}/${pathology.toLowerCase()}`);
     await pathologyRef.set(
       {
-        pathology: pathology
-          .charAt(0)
-          .toUpperCase()
-          .concat(pathology.slice(1)),
+        pathology,
         [section]: data,
       },
       { merge: true }
